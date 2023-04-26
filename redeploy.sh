@@ -27,11 +27,11 @@ case $choice in
 esac
 
 # Prompt user for input
-read -p "Enter your name: " instance
+read -p "Enter instance name: " instance
 
 # Validate input
 if [[ -z "$instance" ]]; then
-  echo "Error: name is empty."
+  echo "Error: instance name is empty."
   exit 1
 fi
 
