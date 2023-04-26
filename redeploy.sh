@@ -27,7 +27,8 @@ case $choice in
 esac
 
 # Prompt user for input
-read -p "Enter instance name: " instance
+echo "Enter instance name: "
+read -r instance
 
 # Validate input
 if [[ -z "$instance" ]]; then
