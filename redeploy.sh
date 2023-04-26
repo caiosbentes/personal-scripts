@@ -8,7 +8,7 @@ cluster2="jaas-prod"
 echo "Please select an option:"
 echo "1. $cluster1"
 echo "2. $cluster2"
-read -p "Enter your choice [1-2]: " choice
+read -rp "Enter your choice [1-2]: " choice
 
 # Handle user input
 case $choice in
