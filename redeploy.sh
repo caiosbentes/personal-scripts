@@ -39,4 +39,4 @@ fi
 helm uninstall $instance -n jenkins-instances
 
 # Install a JaaS instance
-helm install $INSTANCE helm-keysight/jenkins-helm -n jenkins-instances -f $instance.yaml
+helm install $instance helm-keysight/jenkins-helm -n jenkins-instances -f $instance.yaml
