@@ -14,11 +14,11 @@ read -p "Enter your choice [1-2]: " choice
 case $choice in
   1)
     echo "You selected $cluster1."
-    kubectx $cluster1
+    kubectx $cluster1 && cd config_files/bbn-production && git pull
     ;;
   2)
     echo "You selected $cluster2."
-    kubectx $cluster2
+    kubectx $cluster2 && cd /config_files/cos-production && git pull 
     ;;
   *)
     echo "Invalid choice. Please enter a number between 1 and 2."
