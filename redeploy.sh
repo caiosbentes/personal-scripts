@@ -1,13 +1,17 @@
 #!/bin/bash
 
-# Define options
-cluster1="jaas-bbn"
-cluster2="jaas-prod"
+# Define options as an associative array
+declare -A clusters=(
+  [1]="jaas-bbn"
+  [2]="jaas-prod"
+)
 
-# Prompt user for input
-echo "Please select an option:"
-echo "1. $cluster1"
-echo "2. $cluster2"
+# Prompt user for cluster choice
+echo "Please select a cluster:"
+for key in "${!clusters[@]}"; do
+  echo "$key. ${clusters[$key]}"
+done
+
 read -rp "Enter your choice [1-2]: " choice
 
 # Handle user input
